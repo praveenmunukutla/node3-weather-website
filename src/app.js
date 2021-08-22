@@ -7,6 +7,7 @@ const geocode = require('./utils/geocode')
 // store express object
 // configures the server
 const app = express()
+const port = process.env.PORT || 3000
 
 // have to tell express that template engine is setup.
 // spacing and capitalization is import.
@@ -98,6 +99,6 @@ app.get('*', (request, response)=>{
 })
 
 //starts server and listens on the port number
-app.listen(3000, () => {
-    console.log('Server is up on port 3000')
+app.listen(port, () => {
+    console.log('Server is up on port' + port)
 })
